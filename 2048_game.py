@@ -30,15 +30,19 @@ def generate_random_cell(grid):
 def move(direction, grid):
     if direction == 'w':
         # TODO
+        # Move to top
         pass
     elif direction == 's':
         # TODO
+        # Move to bottom
         pass
     elif direction == 'a':
         # TODO
+        # Move to left
         pass
     elif direction == 'd':
         # TODO
+        # Move to right
         pass
     else:
         print("Wrong input.")
