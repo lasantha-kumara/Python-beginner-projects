@@ -2,17 +2,6 @@ import math
 import random
 
 
-# calculate a random number according to the formula log2(upper_bound - lower_bound + 1)
-def num_of_guesses(upper_bound, lower_bound):
-    return round(math.log(upper_bound - lower_bound + 1, 2))
-
-
-# generate a random number a return it
-def generate_a_random_number(start, end):
-    random_number = random.randint(start, end)
-    return random_number
-
-
 def main():
     try:
         start = int(input("Enter starting number: "))
@@ -63,6 +52,17 @@ def main():
     except ValueError:
         print("Wrong data type!")
         main()
+
+
+# calculate a random number according to the formula log2(upper_bound - lower_bound + 1)
+def num_of_guesses(upper_bound, lower_bound):
+    return round(math.log(upper_bound - lower_bound + 1, 2))
+
+
+# generate a random number a return it
+def generate_a_random_number(start, end):
+    random_number = random.randint(start, end)
+    return random_number
 
 
 main()
