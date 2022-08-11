@@ -1,30 +1,5 @@
 import random
 
-# get to numbers and compare digits in it. and return correct amount if digits
-
-
-def count_correct_digits(random_number, guess):
-    correct_digits = 0
-
-    for num1, num2 in zip(str(random_number), str(guess)):
-        if num1 == num2:
-            correct_digits += 1
-        else:
-            pass
-
-    return correct_digits
-
-# get to numbers and compare digits in it. and print correct amount if digits
-
-
-def print_correct_digits(random_number, guess):
-
-    for num1, num2 in zip(str(random_number), str(guess)):
-        if num1 == num2:
-            print(num1, end=" ")
-        else:
-            print("_", end=" ")
-
 
 def main():
     random_number = random.randint(1000, 10000)
@@ -79,6 +54,30 @@ def main():
                 continue
 
         tries += 1
+
+
+# get to numbers and compare digits in it. and return correct amount if digits
+def count_correct_digits(random_number, guess):
+    correct_digits = 0
+
+    for num1, num2 in zip(str(random_number), str(guess)):
+        if num1 == num2:
+            correct_digits += 1
+        else:
+            pass
+
+    return correct_digits
+
+# get to numbers and compare digits in it. and print correct amount if digits
+
+
+def print_correct_digits(random_number, guess):
+
+    for num1, num2 in zip(str(random_number), str(guess)):
+        if num1 == num2:
+            print(num1, end=" ")
+        else:
+            print("_", end=" ")
 
 
 main()
