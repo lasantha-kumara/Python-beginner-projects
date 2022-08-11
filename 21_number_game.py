@@ -3,6 +3,43 @@ import random
 input_numbers = []
 
 
+def main():
+    print("Player 2 is computer")
+
+    print("Do you want to start the game? (Yes/No)")
+    start = input("> ").lower()
+
+    if start == "yes" or "y":
+        print("Enter 'F' to take the first chance.")
+        print("Enter 'S' to take the second chance.")
+        chance = input("> ").lower()
+        # if user choose to play first
+        if chance == "f":
+            player_move()
+            computer_move()
+        # if user choose to play second
+        elif chance == "s":
+            computer_move()
+        else:
+            print("Wrong input.")
+            quit()
+
+        on = True
+        # while user or computer meet 21 this is going to run
+        while on:
+            print("Order of inputs after computer's turn is: ")
+            print(input_numbers, "\n")
+            print("Your turn.\n")
+
+            player_move()
+            computer_move()
+
+    elif start == "no" or "n":
+        quit()
+    else:
+        print("Wrong input.")
+
+
 def player_move():
     try:
         numbers = int(input("How many number do you wish to enter? "))
@@ -62,43 +99,6 @@ def computer_move():
         input_numbers.append(new_number)
 
         last_number += 1
-
-
-def main():
-    print("Player 2 is computer")
-
-    print("Do you want to start the game? (Yes/No)")
-    start = input("> ").lower()
-
-    if start == "yes" or "y":
-        print("Enter 'F' to take the first chance.")
-        print("Enter 'S' to take the second chance.")
-        chance = input("> ").lower()
-        # if user choose to play first
-        if chance == "f":
-            player_move()
-            computer_move()
-        # if user choose to play second
-        elif chance == "s":
-            computer_move()
-        else:
-            print("Wrong input.")
-            quit()
-
-        on = True
-        # while user or computer meet 21 this is going to run
-        while on:
-            print("Order of inputs after computer's turn is: ")
-            print(input_numbers, "\n")
-            print("Your turn.\n")
-
-            player_move()
-            computer_move()
-
-    elif start == "no" or "n":
-        quit()
-    else:
-        print("Wrong input.")
 
 
 main()
