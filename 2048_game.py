@@ -1,6 +1,23 @@
 import random
 
 
+def main():
+    grid = [[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]]
+
+    print_moves()
+
+    generate_random_cell(grid)
+    print_grid(grid)
+    print()
+
+    on = True
+    while on:
+        direction = input("Press the command : ").lower()
+        move(direction, grid)
+        print_grid(grid)
+        print()
+
+
 def print_moves():
     print("""
 Commands are as follows :
@@ -46,23 +63,6 @@ def move(direction, grid):
         pass
     else:
         print("Wrong input.")
-
-
-def main():
-    grid = [[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]]
-
-    print_moves()
-
-    generate_random_cell(grid)
-    print_grid(grid)
-    print()
-
-    on = True
-    while on:
-        direction = input("Press the command : ").lower()
-        move(direction, grid)
-        print_grid(grid)
-        print()
 
 
 main()
